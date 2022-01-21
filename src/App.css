@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+body {
+  background-color: #FFBF69;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background-color: #2EC4B6;
+  height: 130px;
+  color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}
+
+.nav-title {
+  font-size: 50px;
+  margin: 0 20px;
+  display: inline;
+}
+
+.nav-title a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav button {
+  border: 1px solid white;
+  height: 50px;
+  padding: 10px;
+  font-size: 25px;
+  background-color: #2EC4B6;
+  margin: 0 20px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links a, .each-transaction a {
+  text-decoration: none;
+  color: white;
+}
+
+.page-title {
+  color: white;
+  text-align: center;
+}
+
+.Transactions, .display-total, .center, .edit-form, .new-form {
+  display: flex;
+  justify-content: center;
+}
+
+.table-transactions {
+  width: 60%;
+  border-spacing: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #2EC4B6;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+tbody {
+  text-align: center;
+}
+
+.each-transaction a:hover {
+  text-decoration: underline;
+}
+
+.display-total {
+  color: white;
+}
+
+.transaction-info, .form-center {
+  width: 40%;
+  background-color: #2EC4B6;
+  color: white;
+  display: flexbox;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.section-info, input {
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  outline: none;
+}
+
+input {
+  color: #FF9F1C;
+}
+
+.section-title, label {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+
+.info-section, .form-section {
+  margin: 20px 5px;
+}
+
+.transaction-index, .info-links {
+  text-align: center;
+}
+
+.info-links button, .submit-btn {
+  background-color: #FFBF69;
+  width: 125px;
+  height: 50px;
+  font-size: 20px;
+  margin: 15px;
+  border: 1px solid #FFBF69;
+  border-radius: 10px;
+  color: white
 }
