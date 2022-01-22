@@ -14,21 +14,44 @@ function Transactions() {
     }, []);
 
     let totalArr = transactions.map(transaction => transaction.amount);
+
     let totalNum = totalArr.reduce((acc, curr) => {
         return Number(acc) + Number(curr);
     }, 0);
 
-    // let income = totalArr.reduce((acc, curr) => {
-    //     if(Number(curr) > 0) {
-    //         return Number(acc) + Number(curr);
-    //     }
-    // }, 0);
+    let income = totalArr.reduce((acc, curr) => {
+        if(Number(curr) > 0) {
+            return Number(acc) + Number(curr);
+        } else {
+            return Number(acc) + 0;
+        }
+    }, 0);
 
-    // console.log(totalArr);
+    let spent = totalArr.reduce((acc, curr) => {
+        if(Number(curr) < 0) {
+            return Number(acc) + Number(curr);
+        } else {
+            return Number(acc) + 0;
+        }
+    }, 0);
     
-    return(
+    let highlight = () => {
+        if(totalNum > 1000) {
+            return <div style = {{backgroundColor: "#2EC4B6", color: "white"}} className="display-total">Balance: $ {totalNum.toFixed(2)}</div>
+        } else if (totalNum < 0) {
+            return <div style = {{backgroundColor: "red", color: "white"}} className="display-total">Balance: $ {totalNum.toFixed(2)}</div>
+        } else {
+            return <div style = {{backgroundColor: "white", color: "#2EC4B6"}} className="display-total">Balance: $ {totalNum.toFixed(2)}</div>
+        }
+    }
+
+    return (
         <div>
-            <h1 className="display-total">Income: $ 0</h1>
+            <div className="display-section">
+                <div className="display-total">Income: $ {income.toFixed(2)}</div>
+                <div className="display-total">Spent: $ {spent.toFixed(2)}</div>
+                {highlight()}
+            </div>
             <div className="Transactions">
                 <table className="table-transactions">
                 <thead>
@@ -36,6 +59,7 @@ function Transactions() {
                         <th>Date</th>
                         <th>Name</th>
                         <th>Amount</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,7 +69,6 @@ function Transactions() {
                 </tbody>
                 </table>
             </div>
-            <h1 className="display-total">Total: $ {totalNum.toFixed(2)}</h1>
         </div>
     )
 }

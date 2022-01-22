@@ -6,8 +6,11 @@ function Transaction({transaction, index}) {
     return (
         <tr className = "each-transaction">
             <td>{date}</td>
-            <td><Link to = {`/transactions/${index}`}>{name}</Link></td>
+            <td>{name}</td>
             <td>$ {amount}</td>
+            <td>
+                [ <Link to = {`/transactions/${index}`}>Edit</Link> ]
+            </td>
         </tr>
     )
 }
