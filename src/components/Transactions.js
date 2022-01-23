@@ -57,7 +57,7 @@ function Transactions() {
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Name</th>
+                        <th>Transaction Name</th>
                         <th>Amount</th>
                         <th>Edit</th>
                     </tr>

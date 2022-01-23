@@ -44,7 +44,7 @@ function TransactionEditForm() {
                     </div>
 
                     <div className="form-section">
-                        <label htmlFor="name">NAME</label>
+                        <label htmlFor="name">TRANSACTION NAME</label>
                         <input id = "name" value = {transaction.name} type = "text" onChange = {handleText} required />
                     </div>
 

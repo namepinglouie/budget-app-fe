@@ -33,7 +33,7 @@ function TransactionDetails() {
                 </div>
 
                 <div className="info-section">
-                    <div className="section-title">NAME</div>
+                    <div className="section-title">TRANSACTION NAME</div>
                     <div className="section-info">{name}</div>
                 </div>
 
