@@ -3,12 +3,12 @@ import axios from "axios";
 
 const APP_API = process.env.REACT_APP_API_URL;
 
-function Transaction({transaction, index}) {
+function Transaction({transaction, index, setTransactions}) {
     let {date, name, amount} = transaction;
 
     const handleDelete = (e) => {
         axios.delete(`${APP_API}/transactions/${index}`)
-             .then(window.location.reload())
+             .then(res => setTransactions(res.data))
              .catch(err => console.log(err))
     }
 

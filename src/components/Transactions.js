@@ -64,7 +64,7 @@ function Transactions() {
                 </thead>
                 <tbody>
                 {transactions.map((transaction, index) => {
-                    return <Transaction key = {index} transaction = {transaction} index = {index} />
+                    return <Transaction key = {index} transaction = {transaction} setTransactions={setTransactions} index = {index} />
                 })}
                 </tbody>
                 </table>
