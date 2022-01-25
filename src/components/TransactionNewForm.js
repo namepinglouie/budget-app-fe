@@ -31,7 +31,8 @@ function TransactionNewForm() {
                 <form onSubmit={handleSubmit}>
                     <div className="form-section">
                         <label htmlFor="date">DATE</label>
-                        <input id = "date" value = {transaction.date} type = "text" onChange = {handleText} required />
+                        {/* <input id = "date" value = {transaction.date} type = "text" onChange = {handleText} required /> */}
+                        <input id = "date" value = {transaction.date} type = "date" onChange = {handleText} required />
                     </div>
 
                     <div className="form-section">

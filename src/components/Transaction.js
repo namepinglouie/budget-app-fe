@@ -12,14 +12,20 @@ function Transaction({transaction, index, setTransactions}) {
              .catch(err => console.log(err))
     }
 
+    const handleDate = (dateStr) => {
+        let date = new Date(`${dateStr} 00:00:00`);
+        let mdyName = date.toLocaleString("en-us", {month: "long", day: "numeric", year: "numeric"});
+        return mdyName;
+    };
+
     return (
         <tr className = "each-transaction">
-            <td>{date}</td>
+            <td>{handleDate(date)}</td>
             <td>{name}</td>
             <td>$ {amount}</td>
             <td>
                 [ <Link to = {`/transactions/${index}`}>Edit</Link> ]
-                [ <a onClick = {handleDelete}>Delete</a> ]
+                [ <Link to = "" onClick = {handleDelete}>Delete</Link> ]
             </td>
         </tr>
     )

@@ -35,12 +35,13 @@ function TransactionEditForm() {
 
     return (
        <div className="edit-form">
-           <div class = "form-center">
+           <div className = "form-center">
                 <h2 className="transaction-index">Transaction #{index}</h2>
                 <form onSubmit={handleEdit}>
                     <div className="form-section">
                         <label htmlFor="date">DATE</label>
-                        <input id = "date" value = {transaction.date} type = "text" onChange = {handleText} required />
+                        {/* <input id = "date" value = {transaction.date} type = "text" onChange = {handleText} required /> */}
+                        <input id = "date" value = {transaction.date} type = "date" onChange = {handleText} required />
                     </div>
 
                     <div className="form-section">

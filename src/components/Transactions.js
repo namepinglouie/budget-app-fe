@@ -43,7 +43,9 @@ function Transactions() {
         } else {
             return <div style = {{backgroundColor: "white", color: "#2EC4B6"}} className="display-total">Balance: $ {totalNum.toFixed(2)}</div>
         }
-    }
+    };
+
+    
 
     return (
         <div>
